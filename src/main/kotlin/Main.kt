@@ -1,7 +1,10 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val amount = 5500
+    val minCommission = 35
+    val commission = 0.75
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val calculation = (amount * commission)/100
+    val result = if (calculation < minCommission) minCommission else calculation
+
+    println("Комиссия с суммы $amount составит $result руб.")
 }
